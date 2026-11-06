@@ -1,7 +1,7 @@
 {
   "name": "wimborne-wayfarers-hc",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Official modern website for Wimborne Wayfarers Hockey Club (Hostinger Node.js deployment)",
   "main": "server.js",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "compression": "^1.8.0",
-    "express": "^5.1.0",
-    "jszip": "^3.10.1"
+    "express": "^5.2.1",
+    "jszip": "^3.10.2"
   }
 }

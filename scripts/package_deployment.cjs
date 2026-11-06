@@ -5,7 +5,7 @@ const JSZip = require('jszip');
 async function createDeploymentZip() {
   const rootDir = path.resolve(__dirname, '..');
   const pkg = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
-  const version = pkg.version || '1.0.0';
+  const version = pkg.version || '1.0.1';
   const zipFileName = `Wimborne_Wayfarers_v${version}_Deployment.zip`;
   const outputPath = path.join(rootDir, zipFileName);
 
@@ -34,8 +34,8 @@ async function createDeploymentZip() {
     }
   }
 
-  // 1. Add directories (Exact match with SCHT / KynstraScout Hostinger ZIP structure)
-  const directoriesToInclude = ['src', 'public', 'dist'];
+  // 1. Add directories (including scripts/ so Hostinger's "npm run build" finds scripts/build.cjs)
+  const directoriesToInclude = ['src', 'public', 'dist', 'scripts'];
   for (const dir of directoriesToInclude) {
     const fullDirPath = path.join(rootDir, dir);
     if (fs.existsSync(fullDirPath)) {
@@ -48,6 +48,9 @@ async function createDeploymentZip() {
   // 2. Add individual root files
   const rootFiles = [
     'index.html',
+    'styles.css',
+    'client.js',
+    'manifest.json',
     'server.js',
     'package.json',
     'package-lock.json'

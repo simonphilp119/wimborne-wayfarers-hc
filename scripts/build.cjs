@@ -5,6 +5,7 @@ const rootDir = path.resolve(__dirname, '..');
 const distDir = path.join(rootDir, 'dist');
 const publicDir = path.join(rootDir, 'public');
 const srcDir = path.join(rootDir, 'src');
+const assetsDir = path.join(rootDir, 'assets');
 
 function copyRecursive(src, dest) {
   if (!fs.existsSync(src)) return;
@@ -22,11 +23,6 @@ function copyRecursive(src, dest) {
 
 console.log('Building Wimborne Wayfarers HC production bundle into dist/...');
 
-// Clean and recreate dist/, public/, src/
-if (fs.existsSync(distDir)) fs.rmSync(distDir, { recursive: true, force: true });
-if (fs.existsSync(publicDir)) fs.rmSync(publicDir, { recursive: true, force: true });
-if (fs.existsSync(srcDir)) fs.rmSync(srcDir, { recursive: true, force: true });
-
 fs.mkdirSync(distDir, { recursive: true });
 fs.mkdirSync(publicDir, { recursive: true });
 fs.mkdirSync(srcDir, { recursive: true });
@@ -40,13 +36,22 @@ for (const file of filesToCopy) {
   }
 }
 
-// Copy assets/ into dist/assets
-copyRecursive(path.join(rootDir, 'assets'), path.join(distDir, 'assets'));
+// If local assets/ directory exists, sync it into dist/assets (preserving pre-packaged dist/assets on Hostinger)
+if (fs.existsSync(assetsDir)) {
+  copyRecursive(assetsDir, path.join(distDir, 'assets'));
+  if (fs.existsSync(path.join(assetsDir, 'logo-big.png'))) {
+    fs.copyFileSync(path.join(assetsDir, 'logo-big.png'), path.join(publicDir, 'logo-big.png'));
+  }
+}
 
-// Populate public/ and src/
-fs.copyFileSync(path.join(rootDir, 'manifest.json'), path.join(publicDir, 'manifest.json'));
-fs.copyFileSync(path.join(rootDir, 'assets', 'logo-big.png'), path.join(publicDir, 'logo-big.png'));
-fs.copyFileSync(path.join(rootDir, 'styles.css'), path.join(srcDir, 'styles.css'));
-fs.copyFileSync(path.join(rootDir, 'client.js'), path.join(srcDir, 'client.js'));
+if (fs.existsSync(path.join(rootDir, 'manifest.json'))) {
+  fs.copyFileSync(path.join(rootDir, 'manifest.json'), path.join(publicDir, 'manifest.json'));
+}
+if (fs.existsSync(path.join(rootDir, 'styles.css'))) {
+  fs.copyFileSync(path.join(rootDir, 'styles.css'), path.join(srcDir, 'styles.css'));
+}
+if (fs.existsSync(path.join(rootDir, 'client.js'))) {
+  fs.copyFileSync(path.join(rootDir, 'client.js'), path.join(srcDir, 'client.js'));
+}
 
-console.log('Production bundle created successfully in dist/.');
+console.log('Production bundle verified and ready in dist/.');

@@ -29,8 +29,8 @@ app.use(express.static(staticDir, {
   }
 }));
 
-// SPA Routing: Redirect all non-file requests to index.html
-app.get('/{*splat}', (req, res) => {
+// SPA Routing: Redirect all non-file requests to index.html (compatible with Express 4 & 5)
+app.use((req, res) => {
   res.sendFile(path.join(staticDir, 'index.html'));
 });
 
