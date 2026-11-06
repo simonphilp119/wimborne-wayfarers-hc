@@ -17,3 +17,4 @@ This repository is pre-configured for **Hostinger's Node.js Web App** hosting:
 - **Start Command**: `npm start`
 - **Build Command**: `npm run build`
 - **Port**: Automatically binds to `process.env.PORT` provided by Hostinger (defaults to `3000` locally).
+

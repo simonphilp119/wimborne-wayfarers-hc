@@ -1,78 +1,40 @@
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
+import express from 'express';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import fs from 'fs';
+import compression from 'compression';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || "0.0.0.0";
-const ROOT = __dirname;
 
-const MIME_TYPES = {
-  ".html": "text/html; charset=utf-8",
-  ".css": "text/css; charset=utf-8",
-  ".js": "application/javascript; charset=utf-8",
-  ".json": "application/json; charset=utf-8",
-  ".svg": "image/svg+xml",
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".jpeg": "image/jpeg",
-  ".webp": "image/webp",
-  ".gif": "image/gif",
-  ".ico": "image/x-icon"
-};
+// Enable Gzip compression
+app.use(compression());
 
-const server = http.createServer((req, res) => {
-  const safeUrl = (req.url || "/").split("?")[0];
+// Serve from 'dist' if built, otherwise serve from project root
+const staticDir = fs.existsSync(path.join(__dirname, 'dist', 'index.html'))
+  ? path.join(__dirname, 'dist')
+  : __dirname;
 
-  if (safeUrl === "/health") {
-    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
-    res.end(JSON.stringify({ status: "ok", club: "Wimborne Wayfarers Hockey Club" }));
-    return;
-  }
-
-  const relativePath = safeUrl === "/" ? "index.html" : decodeURIComponent(safeUrl.replace(/^\/+/, ""));
-  const filePath = path.resolve(ROOT, relativePath);
-
-  // Prevent directory traversal outside ROOT
-  if (!filePath.startsWith(ROOT)) {
-    res.writeHead(403, { "Content-Type": "text/plain; charset=utf-8" });
-    res.end("403 Forbidden");
-    return;
-  }
-
-  fs.stat(filePath, (statErr, stats) => {
-    const targetFile = !statErr && stats.isFile() ? filePath : path.join(ROOT, "index.html");
-    const isFallback = targetFile !== filePath && safeUrl !== "/";
-
-    // Return 404 for missing asset files (.jpg, .png, .css, .js) rather than HTML fallback
-    if (isFallback && path.extname(filePath)) {
-      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end("404 Asset Not Found");
-      return;
+app.use(express.static(staticDir, {
+  setHeaders: (res, filepath) => {
+    const filename = path.basename(filepath);
+    if (filename === 'sw.js' || filename === 'manifest.json') {
+      res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0');
+      res.setHeader('Pragma', 'no-cache');
+      res.setHeader('Expires', '0');
     }
+  }
+}));
 
-    fs.readFile(targetFile, (err, content) => {
-      if (err) {
-        res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
-        res.end("500 Internal Server Error");
-        return;
-      }
-
-      const ext = path.extname(targetFile).toLowerCase();
-      const contentType = MIME_TYPES[ext] || "application/octet-stream";
-      const cacheControl = ext === ".html" ? "no-cache" : "public, max-age=86400";
-
-      res.writeHead(200, {
-        "Content-Type": contentType,
-        "Cache-Control": cacheControl,
-        "X-Content-Type-Options": "nosniff"
-      });
-      res.end(content);
-    });
-  });
+// SPA Routing: Redirect all non-file requests to index.html
+app.get('/{*splat}', (req, res) => {
+  res.sendFile(path.join(staticDir, 'index.html'));
 });
 
-server.listen(PORT, HOST, () => {
-  console.log(`🏑 Wimborne Wayfarers HC server listening on http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`🏑 Wimborne Wayfarers HC is running on port ${PORT}`);
+  console.log(`Serving from: ${staticDir}`);
 });
-
-module.exports = server;

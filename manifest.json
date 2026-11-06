@@ -1,0 +1,16 @@
+{
+  "name": "Wimborne Wayfarers Hockey Club",
+  "short_name": "Wimborne HC",
+  "description": "Hockey for all ages and abilities at Queen Elizabeth's Leisure Centre, Wimborne, Dorset (BH21 4DT).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07120d",
+  "theme_color": "#006c3b",
+  "icons": [
+    {
+      "src": "/assets/logo-big.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

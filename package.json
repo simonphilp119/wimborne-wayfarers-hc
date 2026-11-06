@@ -1,23 +1,22 @@
 {
   "name": "wimborne-wayfarers-hc",
+  "private": true,
   "version": "1.0.0",
-  "description": "Official modern website for Wimborne Wayfarers Hockey Club (Node.js package for Hostinger deployment)",
+  "type": "module",
+  "description": "Official modern website for Wimborne Wayfarers Hockey Club (Hostinger Node.js deployment)",
   "main": "server.js",
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "start": "node server.js",
     "dev": "node server.js",
-    "build": "node -e \"console.log('Static assets verified and ready for production.')\""
+    "build": "node scripts/build.cjs",
+    "start": "node server.js",
+    "package": "node scripts/build.cjs && node scripts/package_deployment.cjs"
   },
-  "keywords": [
-    "wimborne-wayfarers",
-    "hockey-club",
-    "dorset",
-    "nodejs",
-    "hostinger"
-  ],
-  "author": "Wimborne Wayfarers Hockey Club",
-  "license": "MIT"
+  "dependencies": {
+    "compression": "^1.8.0",
+    "express": "^5.1.0",
+    "jszip": "^3.10.1"
+  }
 }
