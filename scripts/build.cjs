@@ -22,13 +22,12 @@ function copyRecursive(src, dest) {
 
 console.log('Building Wimborne Wayfarers HC production bundle into dist/...');
 
-// Clean and recreate dist/
-if (fs.existsSync(distDir)) {
-  fs.rmSync(distDir, { recursive: true, force: true });
-}
-fs.mkdirSync(distDir, { recursive: true });
+// Clean and recreate dist/, public/, src/
+if (fs.existsSync(distDir)) fs.rmSync(distDir, { recursive: true, force: true });
+if (fs.existsSync(publicDir)) fs.rmSync(publicDir, { recursive: true, force: true });
+if (fs.existsSync(srcDir)) fs.rmSync(srcDir, { recursive: true, force: true });
 
-// Ensure public/ and src/ exist for Hostinger Source + Build structure
+fs.mkdirSync(distDir, { recursive: true });
 fs.mkdirSync(publicDir, { recursive: true });
 fs.mkdirSync(srcDir, { recursive: true });
 
@@ -41,10 +40,12 @@ for (const file of filesToCopy) {
   }
 }
 
-// Copy assets/ into dist/assets and public/assets
+// Copy assets/ into dist/assets
 copyRecursive(path.join(rootDir, 'assets'), path.join(distDir, 'assets'));
-copyRecursive(path.join(rootDir, 'assets'), path.join(publicDir, 'assets'));
+
+// Populate public/ and src/
 fs.copyFileSync(path.join(rootDir, 'manifest.json'), path.join(publicDir, 'manifest.json'));
+fs.copyFileSync(path.join(rootDir, 'assets', 'logo-big.png'), path.join(publicDir, 'logo-big.png'));
 fs.copyFileSync(path.join(rootDir, 'styles.css'), path.join(srcDir, 'styles.css'));
 fs.copyFileSync(path.join(rootDir, 'client.js'), path.join(srcDir, 'client.js'));
 

@@ -34,8 +34,8 @@ async function createDeploymentZip() {
     }
   }
 
-  // 1. Add directories (Source + Build package matching Hostinger Node.js requirements)
-  const directoriesToInclude = ['src', 'public', 'dist', 'assets', 'scripts'];
+  // 1. Add directories (Exact match with SCHT / KynstraScout Hostinger ZIP structure)
+  const directoriesToInclude = ['src', 'public', 'dist'];
   for (const dir of directoriesToInclude) {
     const fullDirPath = path.join(rootDir, dir);
     if (fs.existsSync(fullDirPath)) {
@@ -48,9 +48,6 @@ async function createDeploymentZip() {
   // 2. Add individual root files
   const rootFiles = [
     'index.html',
-    'styles.css',
-    'client.js',
-    'manifest.json',
     'server.js',
     'package.json',
     'package-lock.json'
