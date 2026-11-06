@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wimborne Wayfarers Hockey Club | Hockey for All Ages and Abilities!</title>
+  <meta name="description" content="We are a dynamic, sociable hockey club based at QE Leisure Centre in Wimborne, Dorset (BH21 4DT). Hockey for all ages and abilities — from 5 years to 50+." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       Top Announcement & Official Crowdfunder Pitch Appeal Bar
+       ======================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="live-pill">
+          <span class="live-dot"></span>
+          Pitch Appeal
+        </span>
+        <span>
+          Help us get a new pitch! Any donation is greatly appreciated:
+          <a href="https://www.crowdfunder.co.uk/p/wimborne-hockey-pitch#start" target="_blank" rel="noopener noreferrer" class="top-bar-link">
+            Donate on Crowdfunder ↗
+          </a>
+        </span>
+      </div>
+
+      <div class="top-bar-right">
+        <a href="https://wimbornewayfarershc.co.uk/wp-login.php" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem; font-weight:700; color:#d1fae5;">
+          Member Login ↗
+        </a>
+        <button type="button" id="colorModeToggle" class="mode-toggle-btn" aria-label="Toggle Daylight or Dark Pitch Mode">
+          <span>☀️</span> Daylight Mode
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Sticky Header with Official Wimborne Wayfarers Logo
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#top" class="brand-logo" aria-label="Wimborne Wayfarers Hockey Club Home">
+        <div class="logo-img-wrap">
+          <img src="assets/logo-big.png" alt="Wimborne Wayfarers Hockey Club Logo" class="official-logo-img" />
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#squads" class="nav-link">The Club &amp; Teams</a>
+        <a href="#match-centre" class="nav-link">Fixtures &amp; Kit</a>
+        <a href="#training" class="nav-link">Training</a>
+        <a href="#membership" class="nav-link">Membership</a>
+        <a href="#juniors" class="nav-link">Juniors &amp; Welfare</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://www.hawkinsport.co.uk/clubs/hockey-clubs/wimborne-wayfarers-hockey-club" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          Club Kit Shop ↗
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          Contact Us
+        </a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section — Using Official Hero Photo & SVG Banner Title
+       ======================================================================== -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero-photo-bg" role="img" aria-label="Wimborne Wayfarers Hockey Club Team Talk"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-container">
+        <!-- Left Column: Official SVG Logo & Exact Welcome Copy -->
+        <div>
+          <div class="eyebrow-badge">
+            <span>🏑</span> Queen Elizabeth's Leisure Centre • Wimborne, Dorset (BH21 4DT)
+          </div>
+
+          <img src="assets/logo-text2.svg" alt="Wimborne Wayfarers Hockey Club" class="hero-svg-logo" />
+
+          <h1 class="hero-title">
+            Hockey for <span class="text-gradient">All Ages &amp; Abilities!</span>
+          </h1>
+
+          <p class="hero-description">
+            We combine competitive drive with a fun, friendly atmosphere, supporting you to grow and develop whether you are new to hockey, or joining us as an experienced player!
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              Contact Us to Join →
+            </a>
+            <a href="https://www.crowdfunder.co.uk/p/wimborne-hockey-pitch#start" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              🏟️ Help Us Get a New Pitch (Crowdfunder) ↗
+            </a>
+            <a href="#membership" class="btn btn-outline btn-lg" style="color:#fff; border-color:rgba(255,255,255,0.35);">
+              View Membership Prices
+            </a>
+          </div>
+
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-value">5 to 50+</span>
+              <span class="stat-label">Player Age Range</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">5 Senior XIs</span>
+              <span class="stat-label">2 Men's &amp; 3 Ladies' Teams</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">Mixed &amp; Juniors</span>
+              <span class="stat-label">U10/U12 Festivals &amp; U14/15s</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">QE Astro</span>
+              <span class="stat-label">Blandford Rd, BH21 4DT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Real Club Kit & Crowdfunder Pitch Card -->
+        <div class="hero-right-stack">
+          <div class="hero-photo-card">
+            <img src="assets/ladies-1st-xi.jpg" alt="Wimborne Wayfarers Ladies 1st XI in Official Green Kit" />
+            <div class="hero-photo-caption">
+              <span><strong>Official Club Colours:</strong> Wayfarers Forest Green &amp; White</span>
+              <a href="#squads" style="color:#6ee7b7; font-weight:700;">Meet the Teams →</a>
+            </div>
+          </div>
+
+          <div class="hero-feature-card">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+              <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#6ee7b7;">
+                Official Club Appeal
+              </span>
+              <span style="font-size:0.78rem; color:#cbd5e1;">crowdfunder.co.uk</span>
+            </div>
+            <h2 style="font-size:1.25rem; font-weight:800; margin-bottom:0.4rem;">
+              Help Us Get a New Pitch!
+            </h2>
+            <p style="font-size:0.9rem; color:#d1fae5; margin-bottom:1rem;">
+              Support our official Crowdfunder campaign for our pitch at Queen Elizabeth's Leisure Centre. Any donation is greatly appreciated!
+            </p>
+            <a href="https://www.crowdfunder.co.uk/p/wimborne-hockey-pitch#start" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width:100%;">
+              Click Here to Donate on Crowdfunder ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 1: "A Little About Us" (Exact Homepage Text & Club Day Photo)
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-prose">
+            <div class="eyebrow-badge">Welcome to Wimborne Wayfarers HC</div>
+            <h2 class="section-title">A Little About Us</h2>
+            <p>
+              We are a dynamic, sociable club based at <strong>QE Leisure Centre in Wimborne, Dorset</strong>.
+            </p>
+            <p>
+              We combine successful hockey with a friendly, sociable atmosphere, and are always on the lookout for new players, beginner or experienced, to join our Club.
+            </p>
+            <p>
+              Many of our players have been with us since their Junior Days, and are now a vibrant part of our Ladies &amp; Mens Teams.
+            </p>
+            <p>
+              If you are interested, dust off that kit, grab a stick and contact us to find your next session.
+            </p>
+            <p>
+              <strong>Our players range from 5 years to 50+ — so whatever age you are, it’s never too late to join us!</strong>
+            </p>
+
+            <div style="display:flex; gap:0.85rem; flex-wrap:wrap; margin-top:1.5rem;">
+              <a href="#contact" class="btn btn-primary">Contact Us About Joining →</a>
+              <a href="#training" class="btn btn-secondary">View Training Times</a>
+            </div>
+          </div>
+
+          <figure class="about-image-frame">
+            <img src="assets/club-day.jpg" alt="WWHC Club Day at QE Leisure Centre" loading="lazy" />
+            <figcaption class="about-image-caption">
+              📸 WWHC Club Day — QE Leisure Centre Astro Pitch, Wimborne
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- 4 Core Club Pillars from the Original Homepage -->
+        <div class="pillars-grid">
+          <a href="#training" class="pillar-card">
+            <div class="pillar-icon">📅</div>
+            <h3 style="font-size:1.15rem; font-weight:800;">Training</h3>
+            <p style="font-size:0.9rem; color:var(--text-body);">When, where and what to bring! Tuesday &amp; Wednesday sessions at QE Leisure Centre.</p>
+          </a>
+
+          <a href="#juniors" class="pillar-card">
+            <div class="pillar-icon">🎉</div>
+            <h3 style="font-size:1.15rem; font-weight:800;">Socials</h3>
+            <p style="font-size:0.9rem; color:var(--text-body);">It's not all about hockey here! We run great socials, Club Days, and post-match drinks.</p>
+          </a>
+
+          <a href="#contact" class="pillar-card" onclick="prefillSquadEnquiry('Club Sponsorship')">
+            <div class="pillar-icon">🤝</div>
+            <h3 style="font-size:1.15rem; font-weight:800;">Sponsors</h3>
+            <p style="font-size:0.9rem; color:var(--text-body);">Would you like to give back to your local community? Contact us about sponsoring WWHC.</p>
+          </a>
+
+          <a href="#contact" class="pillar-card">
+            <div class="pillar-icon">📍</div>
+            <h3 style="font-size:1.15rem; font-weight:800;">Find Us</h3>
+            <p style="font-size:0.9rem; color:var(--text-body);">Queen Elizabeth's Leisure Centre, Blandford Road, Wimborne, Dorset, BH21 4DT.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 2: The Club — Real Team Photos, Captains & League Links
+         ====================================================================== -->
+    <section class="section section-alt" id="squads">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-badge">The Club • Seniors, Mixed &amp; Juniors</div>
+          <h2 class="section-title">Our Teams &amp; Squads</h2>
+          <p class="section-subtitle">
+            Featuring 5 fantastic senior league teams (2 Men's XIs and 3 Ladies' XIs), our Mixed Championship side, and our thriving Junior section.
+          </p>
+        </div>
+
+        <div class="filter-tabs" id="squadFilterTabs" role="tablist">
+          <button type="button" class="filter-tab active" data-filter="all">All Teams (7)</button>
+          <button type="button" class="filter-tab" data-filter="mens">Mens (1st &amp; 2nd XI)</button>
+          <button type="button" class="filter-tab" data-filter="ladies">Ladies (1st, 2nd &amp; 3rd XI)</button>
+          <button type="button" class="filter-tab" data-filter="mixed">Mixed</button>
+          <button type="button" class="filter-tab" data-filter="juniors">Juniors</button>
+        </div>
+
+        <div class="squads-grid" id="squadsGrid">
+          <!-- Populated by app.js with real team photos & authentic details -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 3: Fixtures & Results + Official Green Kit (Hawkinsport)
+         ====================================================================== -->
+    <section class="section" id="match-centre">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-badge">Matches, Venues &amp; Club Kit</div>
+          <h2 class="section-title">Fixtures, Results &amp; Official Green Kit</h2>
+          <p class="section-subtitle">
+            Filter fixtures and results across our Men's, Ladies', and Junior teams, get Google Maps directions to away pitches, or order official green club kit via Hawkinsport.
+          </p>
+        </div>
+
+        <div class="match-centre-layout">
+          <!-- Left: Recorded Fixtures & Results -->
+          <div class="match-panel">
+            <div class="match-controls-bar">
+              <div class="segmented-control" id="matchViewControl">
+                <button type="button" class="seg-btn active" data-view="all">All Matches</button>
+                <button type="button" class="seg-btn" data-view="results">Recorded Results</button>
+                <button type="button" class="seg-btn" data-view="fixtures">Scheduled Fixtures</button>
+              </div>
+
+              <select id="matchTeamSelect" class="team-select-dropdown" aria-label="Filter matches by team">
+                <option value="all">All Teams</option>
+                <option value="mens-1">Mens 1st XI</option>
+                <option value="mens-2">Mens 2nd XI</option>
+                <option value="ladies-1">Ladies 1st XI</option>
+                <option value="ladies-2">Ladies 2nd XI</option>
+                <option value="ladies-3">Ladies 3rd XI</option>
+                <option value="juniors">Juniors (Festivals &amp; Friendlies)</option>
+              </select>
+            </div>
+
+            <div id="matchCentreContent">
+              <!-- Populated by app.js -->
+            </div>
+          </div>
+
+          <!-- Right: Official Wimborne Wayfarers Green Kit Photo & Hawkinsport Link -->
+          <aside class="kit-showcase-card">
+            <div class="kit-photo-banner">
+              <img src="assets/kit.jpg" alt="Official Wimborne Wayfarers Green Hockey Kit" />
+            </div>
+
+            <div class="kit-card-content">
+              <div>
+                <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.07em; color:var(--brand-primary-hover);">
+                  Official Supplier • Hawkinsport
+                </span>
+                <h3 style="font-size:1.35rem; font-weight:800; margin-top:0.2rem;">
+                  Wimborne Wayfarers Club Kit
+                </h3>
+              </div>
+
+              <p style="font-size:0.92rem; color:var(--text-body);">
+                Our official Forest Green &amp; White playing shirts, skorts, shorts, socks, and training wear are available to purchase online from <strong>Hawkinsport</strong>.
+              </p>
+
+              <div style="background:var(--bg-secondary); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle); font-size:0.86rem; color:var(--text-body);">
+                <p style="margin-bottom:0.4rem;"><strong>✓ Full Adult Membership:</strong> Includes your playing shirt!</p>
+                <p><strong>✓ Juniors:</strong> We do not have a compulsory training sports kit for juniors, though official kit is available for purchase at Hawkinsport.</p>
+              </div>
+
+              <div style="border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border-subtle);">
+                <img src="assets/mens-1st-xi.jpg" alt="Wimborne Wayfarers Men's 1st XI in Green & White Kit" style="width:100%; height:135px; object-fit:cover;" loading="lazy" />
+              </div>
+
+              <a href="https://www.hawkinsport.co.uk/clubs/hockey-clubs/wimborne-wayfarers-hockey-club"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-primary" style="width:100%;">
+                Visit Hawkinsport Club Shop ↗
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 4: Training Times & Interactive QE Leisure Centre Pitch Map
+         ====================================================================== -->
+    <section class="section section-alt" id="training">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-badge">Winter League Training • Q.E. Leisure Centre</div>
+          <h2 class="section-title">Weekly Training Times &amp; Pitch Guide</h2>
+          <p class="section-subtitle">
+            We train and play at <strong>Q.E. Leisure Centre, Blandford Road, Wimborne, BH21 4DT</strong>. Click any session below to see the coaching details and what to bring.
+          </p>
+        </div>
+
+        <div class="training-pitch-grid">
+          <div class="session-cards-stack" id="trainingCardsStack">
+            <!-- Populated by app.js -->
+          </div>
+
+          <div class="pitch-visualizer-card">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.9rem; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <span style="font-size:0.74rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--brand-primary-hover); font-weight:800;">
+                  Q.E. Leisure Centre • BH21 4DT
+                </span>
+                <h3 style="font-size:1.25rem; font-weight:800;" id="pitchActiveTitle">
+                  Juniors (7–9 yrs) (Tuesdays • 6:00pm til 7:00pm)
+                </h3>
+              </div>
+              <span class="venue-badge h">Home Astro</span>
+            </div>
+
+            <div class="pitch-svg-wrapper">
+              <svg viewBox="0 0 600 340" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Queen Elizabeth's Leisure Centre Hockey Pitch">
+                <rect width="600" height="340" fill="#064e3b"/>
+                <rect x="30" y="25" width="540" height="290" fill="#047857" stroke="#ffffff" stroke-width="3"/>
+
+                <rect id="zone-west" x="32" y="27" width="268" height="286" fill="rgba(16, 185, 129, 0.45)"/>
+                <rect id="zone-east" x="300" y="27" width="268" height="286" fill="rgba(16, 185, 129, 0.45)"/>
+
+                <line x1="300" y1="25" x2="300" y2="315" stroke="#ffffff" stroke-width="2.5"/>
+                <line x1="165" y1="25" x2="165" y2="315" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="6 4"/>
+                <line x1="435" y1="25" x2="435" y2="315" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="6 4"/>
+
+                <path d="M 30 95 A 75 75 0 0 1 30 245" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+                <path id="zone-gk" d="M 570 95 A 75 75 0 0 0 570 245 Z" fill="rgba(16, 185, 129, 0.45)" stroke="#ffffff" stroke-width="2.5"/>
+
+                <circle cx="75" cy="170" r="3.5" fill="#ffffff"/>
+                <circle cx="525" cy="170" r="3.5" fill="#ffffff"/>
+
+                <rect x="18" y="148" width="12" height="44" fill="none" stroke="#f8fafc" stroke-width="2.5"/>
+                <rect x="570" y="148" width="12" height="44" fill="none" stroke="#f8fafc" stroke-width="2.5"/>
+
+                <text x="165" y="174" fill="#ffffff" font-family="Outfit, sans-serif" font-weight="800" font-size="14" text-anchor="middle" opacity="0.92">
+                  PITCH ZONE A
+                </text>
+                <text x="435" y="174" fill="#ffffff" font-family="Outfit, sans-serif" font-weight="800" font-size="14" text-anchor="middle" opacity="0.92">
+                  PITCH ZONE B
+                </text>
+                <text x="300" y="16" fill="#a7f3d0" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" text-anchor="middle">
+                  QUEEN ELIZABETH'S LEISURE CENTRE • BLANDFORD ROAD, WIMBORNE, BH21 4DT
+                </text>
+              </svg>
+            </div>
+
+            <div class="pitch-info-bar">
+              <div style="font-weight:700; font-size:0.93rem;" id="pitchAllocationDesc">
+                Q.E. Leisure Centre Astro Pitch
+              </div>
+              <div style="font-size:0.83rem; color:var(--text-body); margin-top:0.25rem;">
+                <strong>Contacts:</strong> <span id="pitchCoachLead">Vicki Home &amp; Sue Close</span>
+              </div>
+              <div style="font-size:0.82rem; color:var(--brand-primary-hover); margin-top:0.25rem; font-weight:600;" id="pitchGearNote">
+                Mouth guards and shin pads are strongly advised. We always have plenty of spare hockey sticks for children to borrow!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 5: Membership Prices & Interactive Calculator (Exact Site Data)
+         ====================================================================== -->
+    <section class="section" id="membership">
+      <div class="container">
+        <div class="section-header centered">
+          <div class="eyebrow-badge">Senior, Junior, Mini &amp; Social Packages</div>
+          <h2 class="section-title">Membership Prices &amp; Calculator</h2>
+          <p class="section-subtitle">
+            All membership fee types (other than specific match fees) are offered <strong>pro rata</strong> to new members joining part way through the season. Memberships can be paid in one go, or throughout the year in smaller payments.
+          </p>
+        </div>
+
+        <!-- Interactive Fee Calculator -->
+        <div class="calculator-box">
+          <div class="calc-controls">
+            <h3 style="font-size:1.35rem; font-weight:800;">Interactive Membership Fee Calculator</h3>
+
+            <div class="calc-field">
+              <div class="calc-label">1. Select Membership Type</div>
+              <div class="calc-options-row" id="calcCategoryGroup">
+                <button type="button" class="calc-chip active" data-cat="adult">Senior Adult</button>
+                <button type="button" class="calc-chip" data-cat="student">Student / Apprentice / Unemployed</button>
+                <button type="button" class="calc-chip" data-cat="junior-adult">Junior (&lt;18 Playing Adult)</button>
+                <button type="button" class="calc-chip" data-cat="mini-adult">Mini (&lt;14 Playing Adult)</button>
+                <button type="button" class="calc-chip" data-cat="mini-only">Mini (&lt;14 Not Playing Adult)</button>
+                <button type="button" class="calc-chip" data-cat="social">Social (£30)</button>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <div class="calc-label">
+                <span>2. Expected League Games Over the Season (Seniors)</span>
+                <span id="calcMatchesVal" style="color:var(--brand-primary-hover);">12 league games</span>
+              </div>
+              <input type="range" id="calcMatchesRange" class="calc-range" min="0" max="22" value="12" />
+              <div style="display:flex; justify-content:space-between; font-size:0.74rem; color:var(--text-muted);">
+                <span>0 (Training Only £50)</span>
+                <span>1–6 Games (Pay-and-Play £15/match**)</span>
+                <span>&gt;6 Games (Full Season £300)</span>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <div class="calc-label">3. Family &amp; Multi-Junior Discounts (For Juniors / Minis)</div>
+              <div class="calc-options-row" id="calcExtraGroup">
+                <button type="button" class="calc-chip active" data-extra="none">Standard Individual</button>
+                <button type="button" class="calc-chip" data-extra="parent-member">Parent Has Adult Membership (£25 Junior / £10 Mini)</button>
+                <button type="button" class="calc-chip" data-extra="second-mini">2 Minis (£75 + £65)</button>
+                <button type="button" class="calc-chip" data-extra="third-mini">3 Minis (£75 + £65 + £55)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-result-card">
+            <span class="calc-rec-tag">Official Club Rate</span>
+            <h4 style="font-size:1.25rem; font-weight:800;" id="calcRecTitle">Full Adult Membership</h4>
+            <div class="calc-price-big" id="calcRecPrice">£300</div>
+            <div style="font-size:0.84rem; color:var(--text-muted);" id="calcRecSub">Per season (includes match fees &amp; shirt)</div>
+            <p style="font-size:0.85rem; color:var(--text-body); margin:0.45rem 0;" id="calcRecNote">
+              For adults expecting to play more than 6 league games over the season.
+            </p>
+            <a href="#contact" class="btn btn-primary" style="width:100%;">
+              Join Now / Enquire →
+            </a>
+          </div>
+        </div>
+
+        <!-- Exact Membership Tiers Grid from /membership/ -->
+        <div class="membership-grid">
+          <div class="membership-card featured">
+            <div>
+              <span class="eyebrow-badge" style="margin-bottom:0.5rem;">Senior Memberships</span>
+              <h3 class="tier-name">Full Adult</h3>
+              <div class="tier-price">£300 <span>/ Per season (includes match fees)</span></div>
+              <ul class="tier-features">
+                <li><span class="check-icon">✓</span> Adult membership (expect to play more than 6 league games over the season)</li>
+                <li><span class="check-icon">✓</span> <strong>Includes club shirt</strong></li>
+                <li><span class="check-icon">✓</span> Pay in one go or in smaller payments</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm">Join Now!</a>
+          </div>
+
+          <div class="membership-card">
+            <div>
+              <span class="eyebrow-badge" style="margin-bottom:0.5rem;">Senior Concession</span>
+              <h3 class="tier-name">Student / Apprentice</h3>
+              <div class="tier-price">£235 <span>/ Per season (includes match fees)</span></div>
+              <ul class="tier-features">
+                <li><span class="check-icon">✓</span> Aged 18 or over and in full-time education</li>
+                <li><span class="check-icon">✓</span> Also applies to apprentices or unemployed</li>
+                <li><span class="check-icon">✓</span> Includes all league match fees</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-outline btn-sm">Join Now!</a>
+          </div>
+
+          <div class="membership-card">
+            <div>
+              <span class="eyebrow-badge" style="margin-bottom:0.5rem;">Junior Memberships</span>
+              <h3 class="tier-name">Juniors &amp; Minis</h3>
+              <div class="tier-price">£75 – £180 <span>/ Per season (includes match fees)</span></div>
+              <ul class="tier-features">
+                <li><span class="check-icon">✓</span> <strong>£180 Junior:</strong> Playing adult hockey (aged under 18)</li>
+                <li><span class="check-icon">✓</span> <strong>£120 Mini playing adult hockey:</strong> (aged under 14)</li>
+                <li><span class="check-icon">✓</span> <strong>£75 Mini:</strong> Not playing adult hockey (aged under 14)</li>
+                <li><span class="check-icon">✓</span> <strong>Parent has adult membership?</strong> Juniors are only £25 and minis are £10!</li>
+                <li><span class="check-icon">✓</span> <strong>Multi-mini discount:</strong> £65 for 2nd, £55 for 3rd+</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-outline btn-sm">Join Now!</a>
+          </div>
+
+          <div class="membership-card">
+            <div>
+              <span class="eyebrow-badge" style="margin-bottom:0.5rem;">Pay-and-Play &amp; Other</span>
+              <h3 class="tier-name">Flexible &amp; Social</h3>
+              <div class="tier-price">£15 <span>/ Per match</span></div>
+              <ul class="tier-features">
+                <li><span class="check-icon">✓</span> <strong>£15 Pay-and-Play:</strong> Expect to play 6 league games or less over the season**</li>
+                <li><span class="check-icon">✓</span> <strong>£50 Training Only:</strong> Per season</li>
+                <li><span class="check-icon">✓</span> <strong>£30 Social:</strong> Per season</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-outline btn-sm">Join Now!</a>
+          </div>
+        </div>
+
+        <!-- Exact Terms & Conditions from /membership/ -->
+        <div style="margin-top:1.75rem; padding:1.25rem 1.5rem; background:var(--bg-surface); border-radius:var(--radius-md); border:1px solid var(--border-subtle); font-size:0.84rem; color:var(--text-muted);">
+          <strong style="color:var(--text-primary); display:block; margin-bottom:0.35rem;">Membership Terms &amp; Conditions:</strong>
+          <p>* If, after the end of the league season, the member has played 17 or more league games, they will be charged the full adult membership fee (without discount) and an administration fee of £25.</p>
+          <p style="margin-top:0.25rem;">** Available for up to six games after which the member can choose to apply for the discounted full adult membership.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 6: Juniors, Safety & Child Welfare + Instagram Updates
+         ====================================================================== -->
+    <section class="section section-alt" id="juniors">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-badge">Juniors • Safety • Welfare</div>
+          <h2 class="section-title">Junior Hockey &amp; Child Welfare</h2>
+          <p class="section-subtitle">
+            A warm welcome to everyone returning to hockey and to everyone joining Wimborne hockey for the first time!
+          </p>
+        </div>
+
+        <div class="juniors-bento">
+          <!-- Safety, Clothing & Specialist Equipment (Exact text from /the-club/juniors/) -->
+          <div class="bento-card bento-span-7">
+            <span class="eyebrow-badge" style="margin-bottom:0.5rem;">Tuesdays • 7–9 yrs (6:00–7:00pm) &amp; 10–13 yrs (7:00–8:00pm)</span>
+            <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:0.65rem;">
+              Safety, Attendance Registration &amp; What to Wear
+            </h3>
+            <p style="color:var(--text-body); font-size:0.93rem; margin-bottom:0.85rem;">
+              <strong>Safety &amp; Registration:</strong> The safety of your children is very important to us. With such a great turn out on a Tuesday night for the under 10’s, please could parents ensure that you <strong>register your child’s/children's attendance with Mike when you arrive</strong>. If you need to leave and return later, you can allocate responsibility to another parent or provide us with a contact number. When training is finished, please register children out with Mike.
+            </p>
+            <p style="color:var(--text-body); font-size:0.93rem;">
+              <strong>Clothing &amp; Equipment:</strong> Please ensure children wear several layers that they can remove as they warm up, plus hats and gloves when cold. Although injury in this age group is minimal, we <strong>strongly advise children wear mouth guards and shin pads</strong> during training. We always have plenty of spare hockey sticks for children to borrow!
+            </p>
+
+            <div class="checklist-grid">
+              <div class="checklist-item"><span>🛡️</span> Shin Pads &amp; Mouth Guard (Strongly Advised)</div>
+              <div class="checklist-item"><span>🏑</span> Spare Sticks Available to Borrow</div>
+              <div class="checklist-item"><span>🧥</span> Warm Layers, Hat &amp; Gloves in Winter</div>
+              <div class="checklist-item"><span>📋</span> Sign In &amp; Out with Mike on Tuesdays</div>
+            </div>
+          </div>
+
+          <!-- Welfare & Junior Contacts -->
+          <div class="bento-card bento-span-5">
+            <span class="eyebrow-badge" style="margin-bottom:0.5rem;">Key Junior Contacts</span>
+            <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:0.5rem;">
+              Welfare &amp; Junior Leadership
+            </h3>
+            <p style="color:var(--text-body); font-size:0.92rem;">
+              Under 10s &amp; Under 12s play a number of Festivals across the season, while Under 14/15 (mixed boys/girls) play a series of Friendlies.
+            </p>
+
+            <div class="welfare-contact-box">
+              <div class="officer-avatar">DH</div>
+              <div>
+                <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Welfare Officer</div>
+                <div style="font-weight:800; font-size:1rem;">Dan Hunwick</div>
+                <div style="font-size:0.82rem; color:var(--brand-primary-hover);">Child Welfare &amp; Safeguarding</div>
+              </div>
+            </div>
+
+            <div class="welfare-contact-box">
+              <div class="officer-avatar">SC</div>
+              <div>
+                <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Junior Organiser</div>
+                <div style="font-weight:800; font-size:1rem;">Sue Close</div>
+                <div style="font-size:0.82rem; color:var(--text-body);">Festivals &amp; Junior Organisation</div>
+              </div>
+            </div>
+
+            <div class="welfare-contact-box">
+              <div class="officer-avatar">VH</div>
+              <div>
+                <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Junior Hockey Captain / Contact</div>
+                <div style="font-weight:800; font-size:1rem;">Vicki Home</div>
+                <div style="font-size:0.82rem; color:var(--text-body);">Club Junior Coordinator</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Club Highlights from @wimbornewayfarershc Instagram Feed on Homepage -->
+          <div class="bento-card bento-span-12">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+              <div style="display:flex; align-items:center; gap:0.85rem;">
+                <img src="assets/insta-avatar.jpg" alt="@wimbornewayfarershc" style="width:48px; height:48px; border-radius:50%; border:2px solid var(--brand-primary);" />
+                <div>
+                  <h3 style="font-size:1.3rem; font-weight:800;">Latest From @wimbornewayfarershc</h3>
+                  <span style="font-size:0.84rem; color:var(--text-muted);">Recent club announcements from our Instagram feed</span>
+                </div>
+              </div>
+              <div style="display:flex; gap:0.65rem;">
+                <a href="https://www.instagram.com/wimbornewayfarershc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Follow @wimbornewayfarershc on Instagram ↗
+                </a>
+                <a href="https://www.facebook.com/wimbornewayfarershc/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Facebook Page ↗
+                </a>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
+              <a href="https://www.instagram.com/p/DbnmwjZNIUN/" target="_blank" rel="noopener noreferrer" style="background:var(--bg-secondary); padding:1.15rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+                <span style="font-size:0.74rem; color:var(--brand-primary-hover); font-weight:800; text-transform:uppercase;">Back2Hockey &amp; Promotions</span>
+                <p style="font-size:0.88rem; color:var(--text-body); margin-top:0.4rem;">
+                  "5 fantastic teams, 2 Mens, 3 Ladies! Our Ladies 1s recently promoted to South Prem Div 2 and Mens 1s also promoted to Div 2. We also have 3 other teams suited to all abilities!"
+                </p>
+              </a>
+
+              <a href="https://www.instagram.com/p/DcYYn-St-7n/" target="_blank" rel="noopener noreferrer" style="background:var(--bg-secondary); padding:1.15rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+                <span style="font-size:0.74rem; color:var(--brand-primary-hover); font-weight:800; text-transform:uppercase;">Club Open Day &amp; Socials</span>
+                <p style="font-size:0.88rem; color:var(--text-body); margin-top:0.4rem;">
+                  "Ladies 1st team vs New Forest friendly, second-hand hockey sale, Mixed 7-a-side games, and social drinks after at the Horns Inn!"
+                </p>
+              </a>
+
+              <a href="https://www.instagram.com/p/Dcy84RSxHx1/" target="_blank" rel="noopener noreferrer" style="background:var(--bg-secondary); padding:1.15rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+                <span style="font-size:0.74rem; color:var(--brand-primary-hover); font-weight:800; text-transform:uppercase;">Season Training Schedule</span>
+                <p style="font-size:0.88rem; color:var(--text-body); margin-top:0.4rem;">
+                  "Our training schedule for this season! Any questions then drop us a message. See you at training! 🏑"
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Section 7: Committee, Club Captains & Contact Us
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow-badge">Club Captains &amp; Committee</div>
+          <h2 class="section-title">Contacts &amp; How To Find Us</h2>
+          <p class="section-subtitle">
+            Get in touch with our Committee or Club Captains below to join a training session, enquire about Junior hockey, or sponsor the club.
+          </p>
+        </div>
+
+        <!-- Exact Club Captains & Committee Members from Website Footer & Contact Page -->
+        <div class="committee-grid">
+          <div class="committee-card">
+            <div class="committee-initials">ML</div>
+            <div>
+              <div class="committee-role">Chair</div>
+              <div class="committee-name">Matt Lyons</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">KA</div>
+            <div>
+              <div class="committee-role">Vice-Chair</div>
+              <div class="committee-name">Katie Azulay</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">MH</div>
+            <div>
+              <div class="committee-role">Treasurer</div>
+              <div class="committee-name">Michael Harvey</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">TH</div>
+            <div>
+              <div class="committee-role">Secretary &amp; Ladies XI Captain</div>
+              <div class="committee-name">Tamsin Hartin</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">TC</div>
+            <div>
+              <div class="committee-role">Social Secretary</div>
+              <div class="committee-name">Todd Clark</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">JJ</div>
+            <div>
+              <div class="committee-role">Mens XI Captain</div>
+              <div class="committee-name">JJ Lovering</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">VH</div>
+            <div>
+              <div class="committee-role">Junior Hockey Captain</div>
+              <div class="committee-name">Vicki Home</div>
+            </div>
+          </div>
+          <div class="committee-card">
+            <div class="committee-initials">RL</div>
+            <div>
+              <div class="committee-role">Mixed Hockey Captain</div>
+              <div class="committee-name">Rhian Lowe</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form & How To Find Us -->
+        <div class="contact-split">
+          <div>
+            <h3 style="font-size:1.6rem; font-weight:800; margin-bottom:0.45rem;">
+              Contact Us...
+            </h3>
+            <p style="color:var(--text-body); font-size:0.93rem; margin-bottom:1.4rem;">
+              Send us a message below regarding Senior, Junior, or Mixed hockey, or sponsorship opportunities.
+            </p>
+
+            <form id="clubContactForm" class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="Your full name" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Your Email *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="you@example.co.uk" required />
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="interestSquad">Enquiry Topic / Team</label>
+                <select id="interestSquad" class="form-select">
+                  <option value="General Club Enquiry">General Club Enquiry</option>
+                  <option value="Mens 1st XI / 2nd XI">Mens 1st XI / 2nd XI (Tuesdays 8:00pm – 9:30pm)</option>
+                  <option value="Ladies 1st / 2nd / 3rd XI">Ladies 1st / 2nd / 3rd XI (Wednesdays 7:00pm – 9:00pm)</option>
+                  <option value="Juniors (7-9 yrs & 10-13 yrs)">Juniors 7–9 yrs &amp; 10–13 yrs (Tuesdays 6:00pm – 8:00pm)</option>
+                  <option value="Mixed XI">Mixed Hockey</option>
+                  <option value="Membership Enquiry">Membership &amp; Pro-Rata Fees</option>
+                  <option value="Club Sponsorship">Interested in Being a Sponsor</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="contactMessage">Your Message *</label>
+                <textarea id="contactMessage" rows="4" class="form-textarea" placeholder="How can we help?" required></textarea>
+              </div>
+
+              <div class="form-group full" style="flex-direction:row; align-items:center; gap:0.6rem;">
+                <input type="checkbox" id="privacyAgree" required style="width:18px; height:18px; accent-color:var(--brand-forest);" />
+                <label for="privacyAgree" style="font-size:0.84rem; color:var(--text-body);">
+                  I confirm that I agree to the <a href="https://wimbornewayfarershc.co.uk/privacy-policy/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">Wimborne Wayfarers privacy notice</a>. *
+                </label>
+              </div>
+
+              <div class="form-group full">
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+                  Send Message →
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div style="display:flex; flex-direction:column; justify-content:space-between; background:var(--bg-secondary); padding:1.85rem; border-radius:var(--radius-lg); border:1px solid var(--border-subtle);">
+            <div>
+              <div style="background:#fff; padding:0.75rem 1rem; border-radius:var(--radius-md); display:inline-block; margin-bottom:1.25rem;">
+                <img src="assets/Logo.jpg" alt="Wimborne Wayfarers Hockey Club" style="height:56px; width:auto;" />
+              </div>
+
+              <h4 style="font-size:1.35rem; font-weight:800; margin-bottom:0.45rem;">
+                How To Find Us...
+              </h4>
+              <p style="color:var(--text-body); font-size:0.95rem; line-height:1.7;">
+                <strong>Wimborne Wayfarers Hockey Club</strong><br />
+                Queen Elizabeth’s Leisure Centre<br />
+                Blandford Road<br />
+                Wimborne<br />
+                Dorset<br />
+                <strong>BH21 4DT</strong>
+              </p>
+
+              <div style="margin-top:1.35rem; padding-top:1.15rem; border-top:1px solid var(--border-subtle); font-size:0.88rem; color:var(--text-body);">
+                <p style="margin-bottom:0.4rem;"><strong>Mens Training:</strong> Tuesdays 8:00pm – 9:30pm</p>
+                <p style="margin-bottom:0.4rem;"><strong>Ladies Training:</strong> Wednesdays 7:00pm – 9:00pm</p>
+                <p style="margin-bottom:0.4rem;"><strong>Juniors (7–9 yrs):</strong> Tuesdays 6:00pm – 7:00pm</p>
+                <p><strong>Juniors (10–13 yrs):</strong> Tuesdays 7:00pm – 8:00pm</p>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <a href="https://www.google.com/maps/search/Queen+Elizabeth+Leisure+Centre,+Blandford+Road,+Wimborne,+UK"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-secondary" style="width:100%;">
+                📍 Open Q.E. Leisure Centre in Google Maps ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Sponsor Callout Banner & Footer (Matching Original Site Structure)
+       ======================================================================== -->
+  <div class="sponsor-banner">
+    <div class="container">
+      Interested in being a sponsor? <a href="#contact" style="text-decoration:underline; margin-left:0.35rem;" onclick="prefillSquadEnquiry('Club Sponsorship')">Contact Us!</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Information</h4>
+          <p style="font-size:0.9rem; line-height:1.7; color:#94a3b8;">
+            Wimborne Wayfarers Hockey Club<br />
+            Queen Elizabeth’s Leisure Centre<br />
+            Blandford Road<br />
+            Wimborne<br />
+            Dorset<br />
+            BH21 4DT
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Club Captains</h4>
+          <ul class="footer-links">
+            <li><strong>Mens XI</strong> – JJ Lovering</li>
+            <li><strong>Ladies XI</strong> – Tamsin Hartin</li>
+            <li><strong>Junior Hockey</strong> – Vicki Home</li>
+            <li><strong>Mixed Hockey</strong> – Rhian Lowe</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacts</h4>
+          <ul class="footer-links">
+            <li><strong>Chair</strong> – Matt Lyons</li>
+            <li><strong>Vice-Chair</strong> – Katie Azulay</li>
+            <li><strong>Treasurer</strong> – Michael Harvey</li>
+            <li><strong>Secretary</strong> – Tamsin Hartin</li>
+            <li><strong>Social Secretary</strong> – Todd Clark</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Social Media &amp; Links</h4>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/wimbornewayfarershc" target="_blank" rel="noopener noreferrer">Instagram (@wimbornewayfarershc) ↗</a>
+            <a href="https://www.facebook.com/wimbornewayfarershc/" target="_blank" rel="noopener noreferrer">Facebook Page ↗</a>
+            <a href="https://www.crowdfunder.co.uk/p/wimborne-hockey-pitch#start" target="_blank" rel="noopener noreferrer">New Pitch Crowdfunder ↗</a>
+            <a href="https://www.hawkinsport.co.uk/clubs/hockey-clubs/wimborne-wayfarers-hockey-club" target="_blank" rel="noopener noreferrer">Hawkinsport Kit Shop ↗</a>
+            <a href="https://wimbornewayfarershc.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Copyright 2026 Wimborne Wayfarers Hockey Club, All rights reserved.</span>
+        <span>Queen Elizabeth's Leisure Centre, Wimborne, Dorset, BH21 4DT</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal & Toast -->
+  <div class="modal-backdrop" id="genericModal" role="dialog" aria-modal="true" aria-labelledby="genericModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 style="font-size:1.2rem; font-weight:800;" id="genericModalTitle">Details</h3>
+        <button type="button" class="modal-close" id="genericModalClose" aria-label="Close modal">✕</button>
+      </div>
+      <div id="genericModalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    <span style="font-size:1.2rem;">🏑</span>
+    <span id="toastText" style="font-weight:600; font-size:0.9rem;">Message sent!</span>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
